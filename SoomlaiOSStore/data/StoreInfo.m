@@ -45,7 +45,7 @@
     return _instance;
 }
 
-- (void)initializeWithIStoreAsssets:(id <IStoreAsssets>)storeAssets{
+- (void)initializeWithIStoreAssets:(id <IStoreAssets>)storeAssets{
     if(storeAssets == NULL){
         NSLog(@"The given store assets can't be null !");
         return;
