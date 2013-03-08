@@ -49,7 +49,7 @@
     return _instance;
 }
 
-- (void)initializeWithStoreAssets:(id<IStoreAsssets>)storeAssets andCustomSecret:(NSString*)secret {
+- (void)initializeWithStoreAssets:(id<IStoreAssets>)storeAssets andCustomSecret:(NSString*)secret {
     
     if (secret && ![secret isEqualToString:@""]) {
         [ObscuredNSUserDefaults setString:secret forKey:@"ISU#LL#SE#REI"];
@@ -61,7 +61,7 @@
     [ObscuredNSUserDefaults setInt:[storeAssets getVersion] forKey:@"SA_VER_NEW"];
     
     [StorageManager getInstance];
-    [[StoreInfo getInstance] initializeWithIStoreAsssets:storeAssets];
+    [[StoreInfo getInstance] initializeWithIStoreAssets:storeAssets];
     
     if ([SKPaymentQueue canMakePayments]) {
         [[SKPaymentQueue defaultQueue] addTransactionObserver:self];

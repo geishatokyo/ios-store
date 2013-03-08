@@ -16,7 +16,7 @@
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
-#import "IStoreAsssets.h"
+#import "IStoreAssets.h"
 
 /**
  * This class is where all the important stuff happens. You can use it to purchase products from Google Play,
@@ -37,7 +37,7 @@
 
 + (StoreController*)getInstance;
 
-- (void)initializeWithStoreAssets:(id<IStoreAsssets>)storeAssets andCustomSecret:(NSString*)secret;
+- (void)initializeWithStoreAssets:(id<IStoreAssets>)storeAssets andCustomSecret:(NSString*)secret;
 /**
  * Start an app-store item (CurrencyPack or NonConsumableItem) purchase process
  * productId is the product id of the required currency pack.

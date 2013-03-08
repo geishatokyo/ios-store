@@ -15,7 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "IStoreAsssets.h"
+#import "IStoreAssets.h"
 
 @class VirtualCategory;
 @class VirtualCurrency;
@@ -55,7 +55,7 @@
  * database version (the old database will be destroyed) OR just bump the version of your implementation of IStoreAssets
  * in order to remove the metadata when the application loads.
  */
-- (void)initializeWithIStoreAsssets:(id <IStoreAsssets>)storeAssets;
+- (void)initializeWithIStoreAssets:(id <IStoreAssets>)storeAssets;
 - (BOOL)initializeFromDB;
 - (NSDictionary*)toDictionary;
 
